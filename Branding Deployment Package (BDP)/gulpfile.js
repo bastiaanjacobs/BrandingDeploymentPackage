@@ -19,7 +19,7 @@ var browserSync = require('browser-sync').create();
 var spsync = require('gulp-spsync-creds').sync;
 
 //customer settings
-var customer_folder = '_clusius';
+var customer_folder = '_mcwresources';
 
 //config paths
 var src_root =  './src';
@@ -37,14 +37,14 @@ var src_jquery = './node_modules/jquery/dist';
 var src_momentjs = './node_modules/moment/min';
 
 var dist_root = './dist';
-var dist_css = './dist/Style Library/_mcwresources/css';
+var dist_css = './dist/Style Library/' + customer_folder + '/css';
 var dist_dp_cwp = "./dist/_catalogs/masterpage/Display Templates/Content Web Parts/" + customer_folder;
 var dist_dp_search = "./dist/_catalogs/masterpage/Display Templates/Search/" + customer_folder;
 var dist_pagelayouts = "./dist/_catalogs/masterpage/" + customer_folder;
-var dist_images = './dist/Style Library/_mcwresources/img';
-var dist_fonts = './dist/Style Library/_mcwresources/font';
-var dist_scripts = './dist/Style Library/_mcwresources/js';
-var dist_components = './dist/Style Library/_mcwresources/components';
+var dist_images = './dist/Style Library/' + customer_folder + '/img';
+var dist_fonts = './dist/Style Library/' + customer_folder + '/font';
+var dist_scripts = './dist/Style Library/' + customer_folder + '/js';
+var dist_components = './dist/Style Library/' + customer_folder + '/components';
 
 // gulp default
 gulp.task('default', function(done) {
@@ -173,7 +173,7 @@ gulp.task('pagelayouts', function() {
 //gulp connect
 gulp.task('connect', function() {
   connect.server({
-      root: 'dist',
+      root: dist_root,
       port: 2323,
       livereload: true
   });
@@ -181,14 +181,14 @@ gulp.task('connect', function() {
 
 //gulp open
 gulp.task('open', function(){
-  gulp.src('dist/index.html')
-      .pipe(open({uri: 'http://localhost:8001'}));
+  gulp.src(dist_components)
+      .pipe(open({uri: 'http://localhost:2323/Style Library/' + customer_folder + '/components/index.html' }));
 });
 
 //gulp watch
 gulp.task('watch', function () {
-  gulp.watch(src_path + '/Components/**/*.html', ['components']);
-  gulp.watch(src_path + '/scss/**/*.scss', ['scss']);
+  gulp.watch(src_components + '/*.html', ['components']);
+  gulp.watch(src_scss + '/*.scss', ['scss']);
 });
 
 // gulp clean
