@@ -1,0 +1,37 @@
+//reset default layout
+#s4-workspace {
+    width: auto!important;
+    height: auto!important;
+    overflow: visible!important;
+    #s4-titlerow {
+        display: none!important;
+    }
+    #contentRow {
+        padding: 0;
+        #sideNavBox {
+            display: none;
+        }
+        #contentBox {
+            margin: 0;
+        }
+    }
+
+    // remove table styling
+    .ms-webpart-zone,
+    .ms-webpart-cell-vertical
+    .ms-webpart-chrome-vertical,
+    .ms-webpart-cell-vertical-inline-table {
+        display: block!important;
+    }
+
+    //stop images from overlaping columns
+    img {
+        max-width: 100%;
+    }
+    .ms-webpart-menuArrowImg,
+    .ms-promlink-button-image img,
+    img#searchImg,
+    img.ms-srch-sb-navImg {
+        max-width: none;
+    }
+}

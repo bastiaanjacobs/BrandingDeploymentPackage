@@ -14,14 +14,19 @@
 		@@include('./_partial/_header.aspx')
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 1" ID="MainWebPartZone1"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+                <div class="col-md-8">
+                    <div class="col-md-12">
+                        <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 1" ID="MainWebPartZone1"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+                    </div>
+                    <div class="col-md-6">
+                            <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 2" ID="MainWebPartZone2"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+                    </div>
+                    <div class="col-md-6">
+                        <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 3" ID="MainWebPartZone3"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 2" ID="MainWebPartZone2"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
-                </div>
-                <div class="col-md-4">
-                    <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 3" ID="MainWebPartZone3"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
+                    <WebPartPages:WebPartZone runat="server" Title="Main Web Part Zone 4" ID="MainWebPartZone4"><ZoneTemplate></ZoneTemplate></WebPartPages:WebPartZone>
                 </div>
             </div>
         </div>

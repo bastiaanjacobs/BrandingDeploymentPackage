@@ -1,1 +1,3 @@
-<span>{{footer}}</span>
+<footer>
+    <span>{{footer}}</span>
+</footer>

@@ -1,9 +1,0 @@
-{
-    "_comment": "do not share credentials",
-    
-    "username": "<username>",
-    "password": "<password>",
-    "site": "<site>",
-    "libraryPath": "<libraryPath>",
-    "publish": "<true|false>"
-}
