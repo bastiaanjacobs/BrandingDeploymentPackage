@@ -2,7 +2,7 @@
 # Introduction #
 
 
-* `Created by:` Bas Jacobs
+* `Created by:` Bastiaan Jacobs
 * `Date:` 15-07-2017
 * `Version: ` 1.0.0.2
 * `Used at the following projects \ customer:` Macaw
@@ -19,18 +19,18 @@ SharePoint Branding Deployment Package (BDP) for applying front-end design solut
 
 
 # Prerequisites #
-In order to run the script nodejs will need to be installed / configured. You can obtain nodejs from this [Link](https://nodejs.org)
+In order to run the script nodejs will need to be installed/configured. You can obtain nodejs from this [Link](https://nodejs.org). After installing nodejs a restart of the operating system may be necessary.
 
 
 # Usage #
 
-```javascript
+```
 npm install
 ````
 
 ### Apply new module to devDependencies ###
 
-```javascript
+```
 npm install [package] --save-dev
 ```
 
