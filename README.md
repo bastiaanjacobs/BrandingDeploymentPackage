@@ -24,14 +24,14 @@ In order to run the script nodejs will need to be installed / configured. You ca
 
 # Usage #
 
-```
+```javascript
 npm install
+````
 
-```
 ### Apply new module to devDependencies ###
-```
-npm install [package] --save-dev
 
+```javascript
+npm install [package] --save-dev
 ```
 
 # Build tasks #
