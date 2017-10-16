@@ -1,6 +1,4 @@
-
 # Introduction #
-
 
 * `Created by:` Bastiaan Jacobs
 * `Date:` 15-07-2017
@@ -17,10 +15,8 @@ SharePoint Branding Deployment Package (BDP) for applying front-end design solut
 -  Office 365 Dedicated (D)
 -  SharePoint 2013 on-premises
 
-
 # Prerequisites #
 In order to run the script nodejs will need to be installed/configured. You can obtain nodejs from this [Link](https://nodejs.org). After installing nodejs a restart of the operating system may be necessary.
-
 
 # Usage #
 
@@ -50,17 +46,18 @@ npm install [package] --save-dev
 
 _*Items will be distributed from the src to the dist folder._
 
+# File structure #
+* `gulpfile.js` Gulp tasks and configuration files
+* `package.json` Specifics of npm's package.json handling including devDependencies 
+* `config.json` SharePoint Authentication needed for serve task (see example below)
 
 # Folder structure #
 * `dist` Generated distribution folder for serving files to SharePoint
 * `src` Local source files stored in source control
-* `gulp` Gulp task and configuration files
 * `node modules` Generated folder containing node modules from package.json
-
 
 # Feedback #
 Place your feedback here
-
 
 # Updates / Version History #
 * V1.0.0.2 added sourcemaps
