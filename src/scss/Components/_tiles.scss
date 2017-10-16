@@ -1,0 +1,20 @@
+.tile-container {
+    max-width: (300px + ($space*3));
+    .tile {
+        font-family: $font;
+        font-size: 14px;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+        margin: 0 $space/3 $space/3 0;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px 2px rgba(0,0,0, 0.24);
+        height: 100px;
+        width: 100px;
+        span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        }
+    }
+}

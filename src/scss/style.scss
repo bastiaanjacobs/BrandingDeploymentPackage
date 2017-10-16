@@ -1,0 +1,21 @@
+// import base
+@import "Base/_reset.scss";
+@import "Base/_variables.scss";
+@import "Base/_sharepoint.scss";
+@import "Base/_typography.scss";
+
+// import layout
+@import "Layout/_grid.scss";
+@import "Layout/_header.scss";
+@import "Layout/_footer.scss";
+
+// import components
+@import "Components/_tiles.scss";
+@import "Components/_newsitem.scss";
+
+// atomic design
+// @import "atoms/**/*";
+// @import "molecules/**/*";
+// @import "organisms/**/*";
+// @import "templates/**/*";
+// @import "pages/**/*";
