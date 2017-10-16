@@ -56,6 +56,18 @@ _*Items will be distributed from the src to the dist folder._
 * `src` Local source files stored in source control
 * `node modules` Generated folder containing node modules from package.json
 
+# _config.json #
+```
+{
+    "_comment": "do not share credentials",
+    
+    "username": "<username>",
+    "password": "<password>",
+    "site": "<site>",
+    "publish": "true"
+}
+```
+
 # Feedback #
 Place your feedback here
 
