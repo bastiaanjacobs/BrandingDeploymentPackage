@@ -19,7 +19,8 @@ var browserSync = require('browser-sync').create();
 var spsync = require('gulp-spsync-creds').sync;
 
 //customer settings
-var customer_folder = '_mcwresources';
+var customer_dir            = '_mcwresources';
+var macaw_dir               = '_mcwresources';
 
 //config paths
 var src_root =  './src';
