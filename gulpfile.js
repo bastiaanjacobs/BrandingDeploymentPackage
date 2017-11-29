@@ -1,55 +1,53 @@
-// npm packages
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var clean = require('gulp-clean');
-var sourcemaps = require('gulp-sourcemaps');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
-var notify = require('gulp-notify');
-var runSequence = require('run-sequence');
-var webserver = require('gulp-webserver');
-var livereload = require('gulp-livereload');
-var watch = require('gulp-watch');
-var open = require('gulp-open');
-var newer = require('gulp-newer');
-var connect = require('gulp-connect');
-var fileinclude = require('gulp-file-include');
-var merge = require('merge-stream');
-var browserSync = require('browser-sync').create();
-var spsync = require('gulp-spsync-creds').sync;
+'use strict';
+
+//npm packages
+var gulp                    = require('gulp');
+var sass                    = require('gulp-sass');
+var clean                   = require('gulp-clean');
+var sourcemaps              = require('gulp-sourcemaps');
+var cssmin                  = require('gulp-cssmin');
+var rename                  = require('gulp-rename');
+var notify                  = require('gulp-notify');
+var runSequence             = require('run-sequence');
+var watch                   = require('gulp-watch');
+var newer                   = require('gulp-newer');
+var fileinclude             = require('gulp-file-include');
+var merge                   = require('merge-stream');
+var browserSync             = require('browser-sync').create();
+var spsync                  = require('gulp-spsync-creds').sync;
 
 //customer settings
-var customer_dir            = '_mcwresources';
+var customer_dir            = '_clusius';
 var macaw_dir               = '_mcwresources';
 
 //config paths
-var src_root =  './src';
-var src_npm = './node_modules';
-var src_scss = './src/scss';
-var src_dp_cwp = './src/Display Templates/Content Web Parts';
-var src_dp_search = './src/Display Templates/Search';
-var src_pagelayouts = './src/Page Layouts';
-var src_components = './src/Components';
-var src_images = './src/img';
-var src_fonts = './src/font';
-var src_scripts = './src/js';
-var src_scripts_library = './src/Library';
-var src_jquery = './node_modules/jquery/dist';
-var src_momentjs = './node_modules/moment/min';
+var src_root                = './src';
+var src_npm                 = './node_modules';
+var src_scss                = './src/scss';
+var src_dp_cwp              = './src/Display Templates/Content Web Parts';
+var src_dp_search           = './src/Display Templates/Search';
+var src_pagelayouts         = './src/Page Layouts';
+var src_components          = './src/Components';
+var src_images              = './src/img';
+var src_fonts               = './src/font';
+var src_scripts             = './src/js';
+var src_scripts_library     = './src/Library';
+var src_jquery              = './node_modules/jquery/dist';
+var src_momentjs            = './node_modules/moment/min';
 
-var dist_root = './dist';
-var dist_css = './dist/Style Library/' + customer_folder + '/css';
-var dist_dp_cwp = "./dist/_catalogs/masterpage/Display Templates/Content Web Parts/" + customer_folder;
-var dist_dp_search = "./dist/_catalogs/masterpage/Display Templates/Search/" + customer_folder;
-var dist_pagelayouts = "./dist/_catalogs/masterpage/" + customer_folder;
-var dist_images = './dist/Style Library/' + customer_folder + '/img';
-var dist_fonts = './dist/Style Library/' + customer_folder + '/font';
-var dist_scripts = './dist/Style Library/' + customer_folder + '/js';
-var dist_components = './dist/Style Library/' + customer_folder + '/components';
+var dist_root               = './dist';
+var dist_css                = './dist/Style Library/' + macaw_dir + '/css';
+var dist_dp_cwp             = './dist/_catalogs/masterpage/Display Templates/Content Web Parts/' + macaw_dir;
+var dist_dp_search          = './dist/_catalogs/masterpage/Display Templates/Search/' + macaw_dir;
+var dist_pagelayouts        = './dist/_catalogs/masterpage/' + customer_dir;
+var dist_images             = './dist/Style Library/' + macaw_dir + '/img';
+var dist_fonts              = './dist/Style Library/' + macaw_dir + '/font';
+var dist_scripts            = './dist/Style Library/' + macaw_dir + '/js';
+var dist_components         = './dist/Style Library/' + macaw_dir + '/components';
 
 // gulp default
 gulp.task('default', function(done) {
-  runSequence('clean', 'scss', 'components', 'images', 'scripts', 'fonts', 'displaytemplates', 'pagelayouts', 'connect', 'open', 'watch', function() {
+  runSequence('clean', 'scss', function() {
     done();
   });
 });
